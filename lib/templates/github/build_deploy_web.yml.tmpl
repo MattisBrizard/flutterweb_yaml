@@ -1,0 +1,33 @@
+# This file was generated using flutterweb_yaml tool.
+#
+# //
+
+name: Build and Deploy GitHub Pages
+on: push
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Setup flutter
+        uses: subosito/flutter-action@v1
+        with:
+          channel: 'beta'
+
+      - name: Enable flutter web
+        run: flutter config --enable-web
+
+      - name: Build
+        run: |
+          cd {{ path }}
+          flutter pub get
+          flutter build web
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          {{=<% %>=}}
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
+          <%={{ }}=%>
+          publish_dir: {{ path }}/build/web
