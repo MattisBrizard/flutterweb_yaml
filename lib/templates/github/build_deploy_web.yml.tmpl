@@ -1,6 +1,6 @@
 # This file was generated using flutterweb_yaml tool.
 #
-# //
+# https://github.com/MattisBrizard/flutterweb_yaml
 
 name: Build and Deploy GitHub Pages
 on: push
@@ -28,6 +28,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           {{=<% %>=}}
-          deploy_key: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           <%={{ }}=%>
           publish_dir: {{ path }}/build/web
