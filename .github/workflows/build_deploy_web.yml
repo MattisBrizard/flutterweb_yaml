@@ -1,6 +1,6 @@
 # This file was generated using flutterweb_yaml tool.
 #
-# //
+# https://github.com/MattisBrizard/flutterweb_yaml
 
 name: Build and Deploy GitHub Pages
 on: push
