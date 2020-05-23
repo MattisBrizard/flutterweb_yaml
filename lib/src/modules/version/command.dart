@@ -23,15 +23,15 @@ class VersionCommand extends Command {
 void version() {
   final pubspecPath = path.join(
     path.dirname(path.dirname(Platform.script.path)),
-    'pubspec.yaml',
+    'pubspec.lock',
   );
   final pubspecFile = File(pubspecPath);
   if (!pubspecFile.existsSync()) {
     throw CriticalException(
-      'The pubspec.yaml file does not exist in this package',
+      'The pubspec.lock file does not exist in this package',
     );
   }
   final pubspec = loadYaml(pubspecFile.readAsStringSync());
-  final version = pubspec['version'].toString();
+  final version = pubspec['packages']['flutter_init']['version'].toString();
   log.message('flutterweb_yaml $version');
 }
