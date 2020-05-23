@@ -52,7 +52,7 @@ class GenerateCommand extends Command {
 
   @override
   String get invocation =>
-      'flutterweb_yaml generate (--provider <provider name> --path <path to app>)';
+      'flutterweb_yaml generate (--provider <provider name> --path <path to app> --[no-]overwrite)';
 
   @override
   Future<void> run() {
@@ -104,7 +104,7 @@ Future<void> _generate(
   String appPath,
   bool overwrite,
 ) async {
-  log.startSection('Generating yaml file for ${describeEnum(provider)}.');
+  log.message('Generating yaml file for ${describeEnum(provider)}.');
   final String templateContent = await Resource(
     _providerTemplatePath(provider),
   ).readAsString();
@@ -120,13 +120,13 @@ Future<void> _generate(
   File file = File(_providerYamlPath(provider));
 
   if (file.existsSync() && !overwrite) {
-    log.endSection('File ${file.path} already exists.');
+    log.message('File ${file.path} already exists.');
     return true;
   } else {
     file
       ..createSync(recursive: true)
       ..writeAsStringSync(contents);
-    log.endSection('File ${file.path} created.');
+    log.message('File ${file.path} created.');
   }
 }
 
