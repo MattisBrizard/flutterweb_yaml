@@ -16,6 +16,8 @@ To update flutterweb_yaml, use the same command.
 
 flutterweb_yaml generates the YAML file you need to build and deploy your Flutter app (or package example on the web).
 
+Always run the command from the root of the project.
+
 ```bash
 flutterweb_yaml generate
 ```
@@ -35,3 +37,9 @@ flutterweb_yaml generate --path ./path_to_my_app
 ```
 
 _Note : For now the only available provider is GitHub, so you don't have to specify the provider in parameters._
+
+## Contribution
+
+If you want to add a new provider, you can make a [pull request](https://github.com/MattisBrizard/flutterweb_yaml/pulls).
+
+If you find a bug, please fill an [issue](https://github.com/MattisBrizard/flutterweb_yaml/issues).
