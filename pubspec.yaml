@@ -6,7 +6,7 @@ homepage: https://github.com/MattisBrizard/flutterweb_yaml
 environment:
   sdk: '>=2.7.0 <3.0.0'
 
-executable:
+executables:
   flutterweb_yaml:
 
 dependencies:
