@@ -32,6 +32,6 @@ void version() {
     );
   }
   final pubspec = loadYaml(pubspecFile.readAsStringSync());
-  final version = pubspec['packages']['flutter_init']['version'].toString();
+  final version = pubspec['packages']['flutterweb_yaml']['version'].toString();
   log.message('flutterweb_yaml $version');
 }
