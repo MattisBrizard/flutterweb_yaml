@@ -1,6 +1,6 @@
 name: flutterweb_yaml
 description: A command-line application to generate CI/CD yaml templates.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/MattisBrizard/flutterweb_yaml
 
 environment:
