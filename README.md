@@ -38,6 +38,8 @@ flutterweb_yaml generate --path ./path_to_my_app
 
 _Note : For now the only available provider is GitHub, so you don't have to specify the provider in parameters._
 
+To know more about the GitHub Actions workflow, checkout this [article](https://medium.com/@mattisbrizard/expose-your-flutter-applications-using-github-actions-and-github-pages-e0050101b900).
+
 ## Contribution
 
 If you want to add a new provider, you can make a [pull request](https://github.com/MattisBrizard/flutterweb_yaml/pulls).
